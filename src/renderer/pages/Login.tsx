@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
@@ -14,6 +15,8 @@ const sendNotification = () =>
 
 export const Login: FC = () => {
     const [isLogged, setIsLogged] = useState(true);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
     useEffect(() => {
         if (!isLogged) {
@@ -21,5 +24,31 @@ export const Login: FC = () => {
         }
     }, [isLogged]);
 
-    return <Container>Sign in</Container>;
+    const handleInputChange = (event: any) => {
+        const name = event.target.getAttribute('name');
+        if (name === 'username') {
+            setUsername(event.target.value);
+        } else if (name === 'password') {
+            setPassword(event.target.value);
+        }
+    };
+
+    return (
+        <Container>
+            <h2>Sign in</h2>
+            <input
+                name="username"
+                placeholder="Username"
+                value={username}
+                onChange={handleInputChange}
+                />
+            <input
+                type="password"
+                name="password"
+                placeholder="password"
+                value={password}
+                onChange={handleInputChange}
+                />
+        </Container>
+    );
 };

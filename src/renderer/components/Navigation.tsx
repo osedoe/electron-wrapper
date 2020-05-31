@@ -9,6 +9,7 @@ const Ul = styled.ul`
     grid-template-columns: 150px 150px;
     grid-column-gap: 12px;
     justify-content: center;
+    align-items: center;
 `;
 
 const Li = styled.li`
@@ -18,7 +19,7 @@ const Li = styled.li`
     justify-content: center;
     align-items: center;
     height: 30px;
-    width: 150px;
+    width: 70px;
     list-style-type: none;
 `;
 

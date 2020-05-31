@@ -48,6 +48,7 @@
     "import/namespace": 0,
     "import/extensions": 0,
     "import/named": 0,
+    "no-console": "off",
     "react/jsx-wrap-multilines": [
       2,
       {
