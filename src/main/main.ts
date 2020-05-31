@@ -7,7 +7,7 @@ let win: BrowserWindow | null;
 const installExtensions = async () => {
     const installer = require('electron-devtools-installer');
     const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
-    const extensions = ['REACT_DEVELOPER_TOOLS', 'REDUX_DEVTOOLS'];
+    const extensions = ['REACT_DEVELOPER_TOOLS'];
 
     return Promise.all(
         extensions.map(name => installer.default(installer[name], forceDownload))
@@ -19,7 +19,7 @@ const createWindow = async () => {
         await installExtensions();
     }
 
-    win = new BrowserWindow({ width: 800, height: 600 });
+    win = new BrowserWindow({ width: 600, height: 600, titleBarStyle: 'hidden' });
 
     if (process.env.NODE_ENV !== 'production') {
         process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = '1'; // eslint-disable-line require-atomic-updates

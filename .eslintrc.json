@@ -51,9 +51,9 @@
     "react/jsx-wrap-multilines": [
       2,
       {
-        "declaration": "parens-new-line",
-        "assignment": "parens-new-line",
-        "return": "parens-new-line",
+        "declaration": "ignore",
+        "assignment": "ignore",
+        "return": "ignore",
         "arrow": "ignore",
         "condition": "ignore",
         "logical": "ignore",
@@ -77,7 +77,7 @@
     "react/jsx-tag-spacing": [
       2,
       {
-        "beforeSelfClosing": "always"
+        "beforeSelfClosing": "never"
       }
     ],
     "react/jsx-one-expression-per-line": 0,

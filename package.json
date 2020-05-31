@@ -98,6 +98,7 @@
     "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
     "@types/react-redux": "^7.0.9",
+    "@types/react-router-dom": "^5.1.5",
     "@types/react-test-renderer": "^16.8.1",
     "@types/webdriverio": "^4.8.7",
     "@types/webpack-env": "^1.13.3",
@@ -141,9 +142,12 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
+    "react-router-dom": "^5.2.0",
     "redux": "^4.0.1"
   }
 }
